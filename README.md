@@ -2,7 +2,7 @@
 Họ và tên:Hoàng Huy Tuấn
 * Lớp: Công nghệ thông tin-K59
 
-## Đề tài: 
+## Đề tài: Website quản lý bán hàng 
 Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Phần 1: Công nghệ sử dụng:
