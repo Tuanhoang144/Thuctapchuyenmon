@@ -6,7 +6,7 @@ Họ và tên:Hoàng Huy Tuấn
 Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Phần 1: Công nghệ sử dụng:
-ASP.NET 
+
 
 ## Phần 2: Các chức năng đã hoàn thành:
 1. 
