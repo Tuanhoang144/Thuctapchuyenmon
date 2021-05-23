@@ -6,7 +6,8 @@ Họ và tên:Hoàng Huy Tuấn
 Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Phần 1: Công nghệ sử dụng:
-PHP
+1.Mysql
+2.xamp
 
 ## Phần 2: Các chức năng đã hoàn thành:
 1. 
