@@ -6,9 +6,9 @@ Họ và tên:Hoàng Huy Tuấn
 Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Phần 1: Công nghệ sử dụng:
-1.Mysql
-2.xamp
-3.php
+1. Mysql
+2. xamp
+3. php
 
 ## Phần 2: Các chức năng đã hoàn thành:
 1. Đăng nhập đăng xuất admin,khách hàng.
@@ -30,9 +30,9 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Hướng dẫn sử dụng:
 
-1.Tải xuống tệp zip.
-2.Dán bên trong thư mục gốc (ở đây dùng xampp) xampp/htdocs
-3.Mở PHPMyAdmin (http://localhost:8080/phpmyadmin) (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
-4.Tạo cơ sở dữ liệu với tên onlineshop.
-5.Nhập tệp onlineshop.sql (trong thư mục tệp SQL File)
-6.Vào trình duyệt gõ đường dẫn http://localhost:8080/onlineshop (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
+1. Tải xuống tệp zip.
+2. Dán bên trong thư mục gốc (ở đây dùng xampp) xampp/htdocs
+3. Mở PHPMyAdmin (http://localhost:8080/phpmyadmin) (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
+4. Tạo cơ sở dữ liệu với tên onlineshop.
+5. Nhập tệp onlineshop.sql (trong thư mục tệp SQL File)
+6. Vào trình duyệt gõ đường dẫn http://localhost:8080/onlineshop (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
