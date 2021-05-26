@@ -20,12 +20,12 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 
 
 ## Phần 3: Các chức năng chưa hoàn thành:
-1.Thống kê.
-2.Thanh toán online.
-3.Xuất hoá đơn.
-4.Đăng nhập bằng google.
-5.Một số mục thêm sửa xoá.
-6.thêm sản phẩm vào giỏ hàng.
+1. Thống kê.
+2. Thanh toán online.
+3. Xuất hoá đơn.
+4. Đăng nhập bằng google.
+5. Một số mục thêm sửa xoá.
+6. thêm sản phẩm vào giỏ hàng.
 7.
 
 ## Hướng dẫn sử dụng:
