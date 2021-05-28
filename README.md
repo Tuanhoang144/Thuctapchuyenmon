@@ -11,22 +11,22 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 3. php
 
 ## Phần 2: Các chức năng đã hoàn thành:
-1. Đăng nhập đăng xuất admin,khách hàng.
+1. Đăng nhập đăng xuất đăng kí admin,khách hàng.
 2. Quản lý danh mục sản phẩm.
 3. Quản lý người dùng thêm sửa xoá.
 4. Quản lý sản phẩm thêm sửa xoá sản phẩm.
 5. Hoá đơn.
-6. 
+6. thống kê.
+7. 
 
 
 ## Phần 3: Các chức năng chưa hoàn thành:
-1. Thống kê.
-2. Thanh toán online.
-3. Xuất hoá đơn.
-4. Đăng nhập bằng google.
-5. Một số mục thêm sửa xoá.
-6. thêm sản phẩm vào giỏ hàng.
-7.
+1. Thanh toán online.
+2. Xuất hoá đơn.
+3. Đăng nhập bằng google.
+4. Một số mục thêm sửa xoá.
+5. thêm sản phẩm vào giỏ hàng.
+6.
 
 ## Hướng dẫn sử dụng:
 
