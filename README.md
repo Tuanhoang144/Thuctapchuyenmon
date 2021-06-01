@@ -12,8 +12,8 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Phần 2: Các chức năng đã hoàn thành:
 1. Đăng nhập đăng xuất đăng kí admin,khách hàng.
-2. Quản lý danh mục sản phẩm.
-3. Quản lý người dùng thêm sửa xoá.
+2. Quản lý danh mục sản phẩm thêm sửa xoá.
+3. Quản lý người dùng.
 4. Quản lý sản phẩm thêm sửa xoá sản phẩm tìm kiếm.
 5. Hoá đơn.
 6. thống kê.
