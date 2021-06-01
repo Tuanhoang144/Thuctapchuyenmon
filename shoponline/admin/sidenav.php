@@ -59,9 +59,9 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="orders.php">
+            <a class="nav-link" href="bills.php">
               <i class="material-icons">library_books</i>
-              <p>Đơn hàng</p>
+              <p>Hoá Đơn</p>
             </a>
           </li>
           <!-- <li class="nav-item ">
