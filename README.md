@@ -20,6 +20,7 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 7. thống kê.
 8. thêm sản phẩm vào giỏ hàng.
 9. xuất hoá đơn file pdf.
+10. Thanh toán.
 
 
 ## Phần 3: Các chức năng chưa hoàn thành:
