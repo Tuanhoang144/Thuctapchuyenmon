@@ -26,7 +26,7 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 1. Thanh toán online.
 2. Xuất file excel.
 3. Đăng nhập bằng google.
-4.đăng nhập facebook.
+4. đăng nhập facebook.
 5.
 
 ## Hướng dẫn sử dụng:
