@@ -12,16 +12,19 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Phần 2: Các chức năng đã hoàn thành:
 1. Đăng nhập, đăng xuất, quên mật khẩu, đăng kí, cho admin and khách hàng.
-2. Quản lý danh mục sản phẩm thêm sửa xoá.
-3. Quản lý người dùng.
-4. Quản lý sản phẩm thêm sửa xoá sản phẩm tìm kiếm.
-5. Quản lý đơn hàng.
-6. thống kê.
-7. thêm sản phẩm vào giỏ hàng.
-8. xuất hoá đơn file pdf.
-9. Thanh toán.
-10. Xuất file excel.
-11. đăng nhập facebook.
+2. Xây dựng Cơ sở dữ liệu .
+3. Quản lý danh mục sản phẩm thêm sửa xoá.
+4. Quản lý người dùng.
+5. Quản lý sản phẩm thêm sửa xoá sản phẩm tìm kiếm.
+6. Quản lý đơn hàng.
+7. thống kê.
+8. thêm sản phẩm vào giỏ hàng.
+9. xuất hoá đơn file pdf.
+10. Thanh toán.
+11. Xuất file excel.
+12. đăng nhập facebook.
+13. Mã hóa mật khẩu (MD5).
+14. 
 
 
 ## Phần 3: Các chức năng chưa hoàn thành:
