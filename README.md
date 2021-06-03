@@ -20,14 +20,15 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 7. thêm sản phẩm vào giỏ hàng.
 8. xuất hoá đơn file pdf.
 9. Thanh toán.
+10. Xuất file excel.
+11. đăng nhập facebook.
 
 
 ## Phần 3: Các chức năng chưa hoàn thành:
 1. Thanh toán online.
-2. Xuất file excel.
-3. Đăng nhập bằng google.
-4. đăng nhập facebook.
-5.
+2. Đăng nhập bằng google.
+3. 
+4.
 
 ## Hướng dẫn sử dụng:
 
