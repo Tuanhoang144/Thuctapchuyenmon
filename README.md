@@ -22,9 +22,8 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 9. xuất hoá đơn file pdf.
 10. Thanh toán.
 11. Xuất file excel.
-12. đăng nhập facebook.
-13. Mã hóa mật khẩu (MD5).
-14. 
+12. Mã hóa mật khẩu (MD5).
+13. 
 
 
 ## Phần 3: Các chức năng chưa hoàn thành:
