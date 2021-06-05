@@ -1,10 +1,14 @@
 <?php
 include "db.php";
-
+$paypal_url='https://www.sandbox.paypal.com/cgi-bin/webscr'; // Test Paypal API URL
+$paypal_id='htuan8288@gmail.com'; // Business email ID
 include "header.php";
+$u_id =$_SESSION["uid"];
+$query = $con->query("SELECT * FROM orders_info WHERE user_id = '$u_id'") or die (mysqli_error());
+$fetch = $query->fetch_array();
 
-
-                         
+$amnt = $fetch['total_amt'];
+$t_id = $fetch['order_id'];                     
 ?>
 
 <style>
@@ -202,7 +206,7 @@ span.price {
 				<input type="hidden" name="total_count" value="'.$total_count.'">
 					<input type="hidden" name="total_price" value="'.$total.'">
 					
-					<input type="submit" id="submit" value="Continue to checkout" class="checkout-btn">
+					<input type="submit" id="submit" value="Continue to checkout" class="btn btn-primary">
 				</form>
 				</div>
 			</div>
@@ -275,6 +279,30 @@ span.price {
 				</div>
 			</div>
 		</div>
+		<div class="col-70">
+				<div class="container-checkout">
+				
+				<div class="">
+						<form action="<?php echo $paypal_url ?>" method="post" >
+						<input type="hidden" name="business" value="<?php echo $paypal_id; ?>">
+						<input type="hidden" name="cmd" value="_xclick">
+						<input type="hidden" name="item_name" value="shop online">
+						<input type="hidden" name="item_number" value="<?php echo $u_id; ?>">
+						<input type="hidden" name="credits" value="510">
+						<input type="hidden" name="userid" value="1">
+						<input type="hidden" name="total_amt" value="<?php echo  $amount_; ?>">
+						<input type="hidden" name="cpp_header_image" value="http://www.phpgang.com/wp-content/uploads/gang.jpg">
+						<input type="hidden" name="no_shipping" value="1">
+						<input type="hidden" name="currency_code" value="$">
+						<input type="hidden" name="handling" value="0">
+						<input type="hidden" name="cancel_return" value="function/cancel.php">
+						<input type="hidden" name="return" value="function/success.php">
+						<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
+					</div>
+					</div>
+					</div>
 	</div>
 </section>
 		<div id="newsletter" class="section">

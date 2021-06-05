@@ -5,7 +5,7 @@ require_once(__DIR__.'/Facebook/autoload.php');
 define('APP_ID', '526227965071653');
 define('APP_SECRET', '747b9b73fe1b3107ffe79e270484b242');
 define('API_VERSION', 'v2.5');
-define('FB_BASE_URL', 'http://localhost:8080/facebook-login-php/');
+define('FB_BASE_URL', 'http://localhost:8080/onlineshop/index.php');
 
 define('BASE_URL', 'http://localhost:8080/');
 

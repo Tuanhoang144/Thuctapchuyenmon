@@ -32,12 +32,13 @@ if (isset($_POST["login_user_with_product"])) {
                                        <a href="#">
                                            forget password ?
                                        </a>
-									   <a href="<?php echo $fb_login_url;?>" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
+									   
                                     </div>
                                     
                                         <input class="primary-btn btn-block"   type="submit"  Value="Login">
                                         
                                         <div class="panel-footer"><div class="alert alert-danger"><h4 id="e_msg"></h4></div></div>
+										<a href="<?php echo $fb_login_url;?>" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
                                 </div>
                                 
 								</form>

@@ -220,10 +220,7 @@ session_start();
 									</a>
 									<div class="cart-dropdown"  >
 										<div class="cart-list" id="cart_product">
-										
-											
 										</div>
-										
 										<div class="cart-btns">
 												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  edit cart</a>
 											
