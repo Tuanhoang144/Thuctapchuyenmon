@@ -149,44 +149,49 @@ include "topheader.php";
                                     <th>Customer Name</th>
                                     <th> Email</th>
                                     <th> Address</th>
-                                    <th>count</th>
-                                    <th>price</th>
+                                    <!-- <th>count</th>
+                                    <th>price</th> -->
                                     <th>Time</th>
+									<th>Orders Status</th>
+									<th>Payment methods</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                          
                             <tbody>
                                 <?php
-					$query = $con->query("select order_id,f_name,email,address,prod_count,total_amt,dateorder from orders_info") or die(mysqli_error());
-					while($fetch = $query->fetch_array())
-						{
-						$order_id = $fetch['order_id'];
-						$cus_names = $fetch['f_name'];
-						$email = $fetch['email'];
-						$address = $fetch['address'];
-                        $count = $fetch['prod_count'];
-                        $price = $fetch['total_amt'];
-                        $time = $fetch['dateorder'];
-				?>
+									$query = $con->query("select * from orders_info") or die(mysqli_error());
+									while($fetch = $query->fetch_array())
+										{
+										$order_id = $fetch['order_id'];
+										$cus_names = $fetch['f_name'];
+										$email = $fetch['email'];
+										$address = $fetch['address'];
+										// $count = $fetch['prod_count'];
+										// $price = $fetch['total_amt'];
+										$time = $fetch['dateorder'];
+										$orderstatus = $fetch['order_stat'];
+										$phuongthucthanhtoan = $fetch['phuongthucthanhtoan'];	
+								?>
                                 <tr>
                                     <td><?php echo $order_id; ?></td>
                                     <td><?php echo $cus_names; ?></td>
                                     <td><?php echo $email; ?></td>
                                     <td><?php echo $address; ?></td>
-                                    <td><?php echo $count; ?></td>
-                                    <td><?php echo $price; ?></td>
                                     <td><?php echo $time; ?></td>
+									<td><?php echo $orderstatus; ?></td>
+									<td><?php echo $phuongthucthanhtoan; ?></td>
+									
                                     <td><a href="watchorder.php?order_id=<?php echo $order_id; ?>">View</a>
                                         <?php
-					// if($o_stat == 'Confirmed'){
+									if($orderstatus == 'Confirmed'){
 
-					// }elseif($o_stat == 'Cancelled'){
+									}elseif($orderstatus == 'Cancelled'){
 
-					// }else{
-					// echo '| <a class="btn btn-mini btn-info" href="confirm.php?id='.$id.'">Confirm</a> ';
-					// echo '| <a class="btn btn-mini btn-danger" href="cancel.php?id='.$id.'">Cancel</a></td>';
-					// }
+									}else{
+									echo '| <a class="btn btn-mini btn-info" href="confirm.php?order_id='.$order_id.'">Confirm</a> ';
+									echo '| <a class="btn btn-mini btn-danger" href="cancel.php?order_id='.$order_id.'">Cancel</a></td>';
+									}
 					?>
                                 </tr>
                                 <?php

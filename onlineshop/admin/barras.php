@@ -1,6 +1,6 @@
 <?php
 	require_once "../db.php";
-	$sql="SELECT dateorder,total_amt from orders_info ";
+	$sql="SELECT month(dateorder),total_amt from orders_info ";
 	$result=mysqli_query($con,$sql);
 	$valoresY=array();//montos
 	$valoresX=array();//fechas

@@ -65,7 +65,7 @@ include "topheader.php";
                                                         trong ngày </h5>
                                                     <span class="h2 font-weight-bold mb-0"><?php 
                             $todaysale =0;
-                                $query1 = mysqli_query($con,"SELECT order_id,total_amt FROM orders_info where MONTH(dateorder) = MONTH(CURDATE())");
+                                $query1 = mysqli_query($con,"SELECT order_id,total_amt FROM orders_info where Date(dateorder) = Date(CURDATE())");
                                 $result1 = mysqli_num_rows($query1);
                                 if($result1 > 0)
                                 {
@@ -74,7 +74,7 @@ include "topheader.php";
                                             $today_sale=$row["total_amt"];
                                             $todaysale+=$today_sale;
                                         }
-                                        echo "<h4>$todaysale</h4>" ;
+                                        echo "<h4>$todaysale $</h4>" ;
                                 }else {
                                     echo "<h4>0</h4>";
                                 }
@@ -108,7 +108,7 @@ include "topheader.php";
                                     $query = mysqli_query($con,"select * from user_info_backup");
                                     $result = mysqli_num_rows($query);
                                 ?>
-                                                        <h4> <?php echo $result ?></h4>
+                                                        <h4> <?php echo $result ?> </h4>
                                                     </span>
                                                 </div>
                                                 <div class="col-auto">
@@ -145,7 +145,7 @@ include "topheader.php";
                                             $today_sale=$row["total_amt"];
                                             $todaysale+=$today_sale;
                                         }
-                                        echo "<h4>$todaysale</h4>" ;
+                                        echo "<h4>$todaysale $</h4>" ;
                                 }else {
                                     echo "<h4>0</h4>";
                                 }

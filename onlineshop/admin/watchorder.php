@@ -70,12 +70,19 @@ include "topheader.php";
                                     </b>
 
                                     <?php
+                                    
+
+
                                     $order_id = $_GET['order_id'];
                                     $query = $con->query("SELECT * FROM orders_info WHERE order_id = '$order_id'") or die (mysqli_error());
                                     $fetch = $query->fetch_array();
 
                                     $amnt = $fetch['total_amt'];
                                     echo "Date : ". $fetch['dateorder']."";
+                                    //tongtien
+                                    $query3 = $con->query("SELECT sum(amt) as 'tongtien' FROM order_products    WHERE order_id = '$order_id'") or die (mysqli_error());
+                                    $fetch1 = $query3->fetch_array();
+                                    $tongtien = $fetch1['tongtien'];
 
                                     $query2 = $con->query("SELECT * FROM order_products LEFT JOIN products ON products.product_id = order_products.product_id WHERE order_products.order_id = '$order_id'") or die (mysqli_error());
                                     while($row = $query2->fetch_array()){
@@ -90,11 +97,12 @@ include "topheader.php";
                                       echo "<td>".$pprice."</td>";
                                       echo "</tr>";
                                     }
+
                                     ?>
 
                                 </table>
                                 <legend></legend>
-                                <h4>TOTAL: <?php echo $amnt; ?> $</h4>
+                                <h4>TOTAL: <?php echo $tongtien; ?> $</h4>
                             </center>
                         </div>
                         <div class='pull-right'>
