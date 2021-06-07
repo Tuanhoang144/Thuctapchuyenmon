@@ -17,16 +17,21 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 4. Quản lý người dùng.
 5. Quản lý sản phẩm thêm sửa xoá sản phẩm tìm kiếm.
 6. Quản lý đơn hàng.
-7. thống kê khách hàng ,doanh thu .
-8. thêm sản phẩm vào giỏ hàng.
-9. xuất hoá đơn file pdf.
-10. Thanh toán cod.
-11. Xuất file excel.
-12. Mã hóa mật khẩu (MD5).
-13. Thanh toán online paypal.
-14. Gửi gmail thông báo khi nhận đơn hàng.
-15. Duyệt đơn hàng .
-16. 
+7. Thêm sản phẩm vào giỏ hàng.
+8. Hiển thị danh sách sản phẩm theo danh mục.
+9. Hiển thị thông tin chi tiết sản phẩm mua khi khách hàng mua.
+10. thống kê khách hàng ,doanh thu .
+11. thêm sản phẩm vào giỏ hàng.
+12. Phân trang.
+13. Hiển thị sản phẩm liên quan.
+14. xuất hoá đơn file pdf.
+15. Thanh toán cod.
+16. Xuất file excel.
+17. Mã hóa mật khẩu (MD5).
+18. Thanh toán online paypal.
+19. Gửi gmail thông báo khi nhận đơn hàng.
+20. Duyệt đơn hàng .
+21. 
 
 
 ## Phần 3: Các chức năng chưa hoàn thành:
