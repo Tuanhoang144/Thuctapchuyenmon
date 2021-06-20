@@ -49,7 +49,7 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 33. Duyệt đơn hàng.
 34. 
 
-Phần 3: Các chức năng chưa hoàn thành:
+## Phần 3: Các chức năng chưa hoàn thành:
 1. 
 2. 
 3. 
