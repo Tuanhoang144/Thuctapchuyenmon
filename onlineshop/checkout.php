@@ -124,31 +124,26 @@ span.price {
 					<div class="row-checkout">
 					
 					<div class="col-50">
-						<h3>Billing Address</h3>
-						<label for="fname"><i class="fa fa-user" ></i> Full Name</label>
+						<h3>Địa chỉ thanh toán</h3>
+						<div class="row">
+						
+						<div class="col-50">
+						</br>
+						</br>
+					
+							<input type="hidden" id="zip" name="zip" class="form-control" pattern="^[0-9]{6}(?:-[0-9]{4})?$" >
+							<label for="fname"><i class="fa fa-user" ></i> Full Name</label>
 						<input type="text" id="fname" class="form-control" name="firstname" pattern="^[a-zA-Z ]+$"  value="'.$row["first_name"].' '.$row["last_name"].'">
 						<label for="email"><i class="fa fa-envelope"></i> Email</label>
 						<input type="text" id="email" name="email" class="form-control" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(\.[a-z]{2,4})$" value="'.$row["email"].'" required>
-						<label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-						<input type="text" id="adr" name="address" class="form-control" value="'.$row["address1"].'" required>
-						<label for="city"><i class="fa fa-institution"></i> City</label>
-						<input type="text" id="city" name="city" class="form-control" value="'.$row["address2"].'" pattern="^[a-zA-Z ]+$" required>
-
-						<div class="row">
-						<div class="col-50">
-							<label for="state">State</label>
-							<input type="text" id="state" name="state" class="form-control" pattern="^[a-zA-Z ]+$" required>
 						</div>
-						<div class="col-50">
-							<label for="zip">Zip</label>
-							<input type="text" id="zip" name="zip" class="form-control" pattern="^[0-9]{6}(?:-[0-9]{4})?$" required>
-						</div>
+						
 						</div>
 					</div>
 					
 					
 					<div class="col-50">
-						<h3>Payment</h3>
+						<h3>Thanh toán</h3>
 						<label for="fname">Accepted Cards</label>
 						<div class="icon-container">
 						<i class="fa fa-cc-visa" style="color:navy;"></i>
@@ -156,25 +151,26 @@ span.price {
 						<i class="fa fa-cc-mastercard" style="color:red;"></i>
 						<i class="fa fa-cc-discover" style="color:orange;"></i>
 						</div>
-						
-						
-						<label for="cname">Name on Card</label>
-						<input type="text" id="cname" name="cardname" class="form-control" pattern="^[a-zA-Z ]+$" required>
+						<input type="hidden" id="cname" name="cardname" class="form-control" pattern="^[a-zA-Z ]+$">
 						
 						<div class="form-group" id="card-number-field">
-                        <label for="cardNumber">Card Number</label>
-                        <input type="text" class="form-control" id="cardNumber" name="cardNumber" required>
+					<input type="hidden" id="state" name="state" class="form-control" pattern="^[a-zA-Z ]+$" required>
+                        <input type="hidden" class="form-control" id="cardNumber" name="cardNumber">
                     </div>
-						<label for="expdate">Exp Date</label>
-						<input type="text" id="expdate" name="expdate" class="form-control" pattern="^((0[1-9])|(1[0-2]))\/(\d{2})$" placeholder="12/22"required>
+					
+						<input type="hidden" id="expdate" name="expdate" class="form-control" pattern="^((0[1-9])|(1[0-2]))\/(\d{2})$" placeholder="12/22">
 						
 
 						<div class="row">
 						
 						<div class="col-50">
 							<div class="form-group CVV">
-								<label for="cvv">CVV</label>
-								<input type="text" class="form-control" name="cvv" id="cvv" required>
+							<label for="city"><i class="fa fa-institution"></i> City</label>
+						<input type="text" id="city" name="city" class="form-control" value="'.$row["address2"].'" pattern="^[a-zA-Z ]+$" required>
+						<label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+						<input type="text" id="adr" name="address" class="form-control" value="'.$row["address1"].'" required>
+								<input type="hidden" class="form-control" name="cvv" id="cvv">
+								
 						</div>
 						</div>
 					</div>
@@ -206,7 +202,7 @@ span.price {
 				<input type="hidden" name="total_count" value="'.$total_count.'">
 					<input type="hidden" name="total_price" value="'.$total.'">
 					
-					<input type="submit" id="submit" value="Continue to checkout" class="checkout-btn">
+					<input type="submit" id="submit" value="Thanh toán" class="btn btn-primary">
 				</form>
 				</div>
 			</div>
@@ -223,7 +219,6 @@ span.price {
 				if (isset($_POST["cmd"])) {
 				
 					$user_id = $_POST['custom'];
-					
 					
 					$i=1;
 					echo
@@ -253,19 +248,16 @@ span.price {
 						$amount_ = $_POST['amount_'.$i];
 						
 						$quantity_ = $_POST['quantity_'.$i];
-						$total=$total+$amount_ ;
+						$total=$total+($amount_*$quantity_);
 						$sql = "SELECT product_id FROM products WHERE product_title='$item_name_'";
 						$query = mysqli_query($con,$sql);
 						$row=mysqli_fetch_array($query);
 						$product_id=$row["product_id"];
-					
 						echo "	
-
 						<tr><td><p>$item_number_</p></td><td><p>$item_name_</p></td><td ><p>$quantity_</p></td><td ><p>$amount_</p></td></tr>";
-						
 						$i++;
 					}
-
+					$_SESSION['tien'] = $total;
 				echo"
 
 				</tbody>

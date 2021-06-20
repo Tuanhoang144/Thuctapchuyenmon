@@ -10,27 +10,26 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="img/banner3.jpg" alt="Los Angeles" style="width:100%;">
-        
+        <img src="img/pngtree-black-friday-sale-banner-design-template-abstract-background-image_423467.jpg" alt="Los Angeles" style="width:100%; ">
       </div>
 
       <div class="item">
-        <img src="img/banner2.jpg" style="width:100%;">
+        <img src="img/mua-online-cuoi-tuan.jpg" style="width:100%;">
         
       </div>
     
-      <div class="item">
-        <img src="img/banner4.jpg" alt="New York" style="width:100%;">
+      <!-- <div class="item">
+        <img src="img/dm-xahangdoitra-700-250.jpg" alt="New York" style="width:100%;">
         
       </div>
       <div class="item">
-        <img src="img/banner1.jpg" alt="New York" style="width:100%;">
+        <img src="img/coxanhcoqua-800x340.jpg" alt="New York" style="width:100%;">
         
       </div>
       <div class="item">
-        <img src="img/banner3.jpg" alt="New York" style="width:100%;">
+        <img src="img/banner-home.jpg" alt="New York" style="width:100%;">
         
-      </div>
+      </div> -->
   
     </div>
 
@@ -47,11 +46,47 @@
 </div>
      
 
-
+<!-- HOT DEAL SECTION -->
+		<div id="hot-deal" class="section mainn mainn-raised">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="hot-deal">
+							<ul class="hot-deal-countdown">
+								<li>
+									<div>
+										<h3>10</h3>
+										<span>Hours</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h3>34</h3>
+										<span>Mins</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h3>60</h3>
+										<span>Secs</span>
+									</div>
+								</li>
+							</ul>
+							<h2 class="text-uppercase">KHUYẾN MÃI NÓNG TRONG TUẦN NÀY </h2>
+							<p>Mua sắm Giảm Gía Tới 50%</p>
+							<a class="primary-btn cta-btn" href="store.php">Shop now</a>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /HOT DEAL SECTION -->
 		<!-- SECTION -->
 		<div class="section mainn mainn-raised">
-		
-		
 			<!-- container -->
 			<div class="container">
 			
@@ -59,41 +94,41 @@
 				<div class="row">
 					<!-- shop -->
 					<div class="col-md-4 col-xs-6">
-						<a href="product.php?p=78"><div class="shop">
+						<a href="product.php?p=76"><div class="shop">
 							<div class="shop-img">
-								<img src="./img/shop01.png" alt="">
+								<img src="./img/product04.png" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>iPad<br>Collection</h3>
+								<a href="product.php?p=76" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div></a>
+					</div>
+					<!-- /shop -->
+
+					<!-- shop -->
+					<div class="col-md-4 col-xs-6">
+						<a href="product.php?p=4"><div class="shop">
+							<div class="shop-img">
+								<img src="./product_images/http___pluspng.com_img-png_iphone-6s-png-iphone-6s-gold-64gb-1000.png" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>TV<br>Collection</h3>
+								<a href="product.php?p=4" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div></a>
+					</div>
+					<!-- /shop -->
+
+					<!-- shop -->
+					<div class="col-md-4 col-xs-6">
+						<a href="product.php?p=77"><div class="shop">
+							<div class="shop-img">
+								<img src="./img/product06.png" alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Laptop<br>Collection</h3>
-								<a href="product.php?p=78" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div></a>
-					</div>
-					<!-- /shop -->
-
-					<!-- shop -->
-					<div class="col-md-4 col-xs-6">
-						<a href="product.php?p=72"><div class="shop">
-							<div class="shop-img">
-								<img src="./img/shop03.png" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Accessories<br>Collection</h3>
-								<a href="product.php?p=72" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div></a>
-					</div>
-					<!-- /shop -->
-
-					<!-- shop -->
-					<div class="col-md-4 col-xs-6">
-						<a href="product.php?p=79"><div class="shop">
-							<div class="shop-img">
-								<img src="./img/shop02.png" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Cameras<br>Collection</h3>
-								<a href="product.php?p=79" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+								<a href="product.php?p=77" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
                             </div></a>
 					</div>
@@ -117,13 +152,10 @@
 					<!-- section title -->
 					<div class="col-md-12">
 						<div class="section-title">
-							<h3 class="title">New Products</h3>
+							<h3 class="title">Sản phẩm mới</h3>
 							<div class="section-nav">
 								<ul class="section-tab-nav tab-nav">
 									<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-									<li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-									<li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-									<li><a data-toggle="tab" href="#tab1">Accessories</a></li>
 								</ul>
 							</div>
 						</div>
@@ -140,9 +172,7 @@
 									
 									<?php
                     include 'db.php';
-								
-                    
-					$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id AND product_id BETWEEN 70 AND 75";
+					$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id AND product_id BETWEEN 75 AND 80";
                 $run_query = mysqli_query($con,$product_query);
                 if(mysqli_num_rows($run_query) > 0){
 
@@ -164,7 +194,7 @@
 									<a href='product.php?p=$pro_id'><div class='product-img'>
 										<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
 										<div class='product-label'>
-											<span class='sale'>-30%</span>
+											<span class='sale'></span>
 											<span class='new'>NEW</span>
 										</div>
 									</div></a>
@@ -188,10 +218,7 @@
 									<div class='add-to-cart'>
 										<button pid='$pro_id' id='product' class='add-to-cart-btn block2-btn-towishlist' href='#'><i class='fa fa-shopping-cart'></i> add to cart</button>
 									</div>
-								</div>
-                               
-							
-                        
+								</div>           
 			";
 		}
         ;
@@ -220,51 +247,7 @@
 		</div>
 		<!-- /SECTION -->
 
-		<!-- HOT DEAL SECTION -->
-		<div id="hot-deal" class="section mainn mainn-raised">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="col-md-12">
-						<div class="hot-deal">
-							<ul class="hot-deal-countdown">
-								<li>
-									<div>
-										<h3>02</h3>
-										<span>Days</span>
-									</div>
-								</li>
-								<li>
-									<div>
-										<h3>10</h3>
-										<span>Hours</span>
-									</div>
-								</li>
-								<li>
-									<div>
-										<h3>34</h3>
-										<span>Mins</span>
-									</div>
-								</li>
-								<li>
-									<div>
-										<h3>60</h3>
-										<span>Secs</span>
-									</div>
-								</li>
-							</ul>
-							<h2 class="text-uppercase">hot deal this week</h2>
-							<p>New Collection Up to 50% OFF</p>
-							<a class="primary-btn cta-btn" href="store.php">Shop now</a>
-						</div>
-					</div>
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /HOT DEAL SECTION -->
+		
 		
 
 		<!-- SECTION -->
@@ -277,13 +260,11 @@
 					<!-- section title -->
 					<div class="col-md-12">
 						<div class="section-title">
-							<h3 class="title">Top selling</h3>
+							<h3 class="title">Top Bán hàng</h3>
 							<div class="section-nav">
 								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab2">Formals</a></li>
-									<li><a data-toggle="tab" href="#tab2">Shirts</a></li>
-									<li><a data-toggle="tab" href="#tab2">T-Shirts</a></li>
-									<li><a data-toggle="tab" href="#tab2">Pants</a></li>
+									<li class="active"><a data-toggle="tab" href="#tab2">Điện tử</a></li>
+									
 								</ul>
 							</div>
 						</div>
@@ -302,7 +283,7 @@
                     include 'db.php';
 								
                     
-					$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id AND product_id BETWEEN 59 AND 65";
+					$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id AND product_id BETWEEN 5 AND 10";
                 $run_query = mysqli_query($con,$product_query);
                 if(mysqli_num_rows($run_query) > 0){
 
@@ -324,7 +305,7 @@
 									<a href='product.php?p=$pro_id'><div class='product-img'>
 										<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
 										<div class='product-label'>
-											<span class='sale'>-30%</span>
+											<span class='sale'></span>
 											<span class='new'>NEW</span>
 										</div>
 									</div></a>
@@ -383,7 +364,7 @@
 				<div class="row">
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Top selling</h4>
+							<h4 class="title">Top Bán hàng</h4>
 							<div class="section-nav">
 								<div id="slick-nav-3" class="products-slick-nav"></div>
 							</div>
@@ -430,7 +411,7 @@
 										<img src="./img/product03.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
@@ -442,7 +423,7 @@
 
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Top selling</h4>
+							<h4 class="title">Top Bán hàng</h4>
 							<div class="section-nav">
 								<div id="slick-nav-4" class="products-slick-nav"></div>
 							</div>
@@ -456,9 +437,9 @@
 										<img src="./img/product04.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">$999.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -469,9 +450,9 @@
 										<img src="./img/product05.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">$999.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -482,9 +463,9 @@
 										<img src="./img/product06.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">$999.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<!-- product widget -->
@@ -497,9 +478,9 @@
 										<img src="./img/product07.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">$999.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -510,9 +491,9 @@
 										<img src="./img/product08.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">$999.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -523,9 +504,9 @@
 										<img src="./img/product09.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">$999.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<!-- product widget -->
@@ -539,7 +520,7 @@
 
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Top selling</h4>
+							<h4 class="title">Top Bán hàng</h4>
 							<div class="section-nav">
 								<div id="slick-nav-5" class="products-slick-nav"></div>
 							</div>
@@ -553,7 +534,7 @@
 										<img src="./img/product01.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
@@ -566,7 +547,7 @@
 										<img src="./img/product02.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
@@ -579,7 +560,7 @@
 										<img src="./img/product03.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
@@ -594,7 +575,7 @@
 										<img src="./img/product04.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
@@ -608,7 +589,7 @@
 										<img src="./img/product05.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
@@ -621,7 +602,7 @@
 										<img src="./img/product06.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
+										<p class="product-category">Thể loại</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>

@@ -2,8 +2,9 @@
 include "db.php";
 
 include "header.php";
-$u_id =$_SESSION["uid"];                
+$u_id =$_SESSION["uid"];   
 ?>
+
 
 <style>
 .row-checkout {
@@ -131,7 +132,7 @@ span.price {
             </div>';
 			?>
         </div>
-       
+
     </div>
 </section>
 
@@ -149,7 +150,7 @@ paypal.Buttons({
         return actions.order.create({
             purchase_units: [{
                 amount: {
-                    value: '0.5'
+                        value:'<?php echo $_SESSION['tien'];?>'
                 }
             }]
         });
@@ -157,7 +158,7 @@ paypal.Buttons({
     onApprove: function(data, actions) {
         return actions.order.capture().then(function(details) {
             console.log(details)
-            window.location.replace("http://localhost:8080/onlineshop/success.php")
+            window.location.replace("success.php")
         })
     },
     onCancel: function(data) {

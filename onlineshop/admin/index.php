@@ -16,9 +16,9 @@ include "topheader.php";
 <div class="content">
     <div class="container-fluid">
         <div class="col-md-14">
-            <div class="card ">
-                <div class="card-header card-header-primary">
-                    <h4 class="card-title">Manage Categorys</h4>
+            <div class="card">
+                <div class="card-header card-header-info">
+                    <h4 class="card-title">Dashboard</h4>
                 </div>
                 <form action="" style="background-color:#fff; overflow:hidden;">
                     <div class="card-body">
@@ -30,20 +30,24 @@ include "topheader.php";
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col">
+                                                <div class="stat-widget-five">
+                                                    <div class="stat-icon dib flat-color-2">
+                                                    </div>
                                                     <h5 class="card-title text-uppercase text-muted mb-0">Tổng sản phẩm
                                                     </h5>
                                                     <span class="h2 font-weight-bold mb-0"> <?php
-                                    $query = mysqli_query($con,"select * from products");
-                                    $result = mysqli_num_rows($query);
-                                   
-                                ?>
+                                                            $query = mysqli_query($con,"select * from products");
+                                                            $result = mysqli_num_rows($query);
+                                        
+                                                        ?>
                                                         <h4> <?php echo $result ?></h4>
                                                     </span>
+                                                </div>
                                                 </div>
                                                 <div class="col-auto">
                                                     <div
                                                         class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                                                        <i class="ni ni-active-40"></i>
+                                                        <i class="fas fa-user-friends"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -61,7 +65,7 @@ include "topheader.php";
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col">
-                                                    <h5 class="card-title text-uppercase text-muted mb-0">Tổng doanh thu
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Doanh thu
                                                         trong ngày </h5>
                                                     <span class="h2 font-weight-bold mb-0"><?php 
                             $todaysale =0;
@@ -83,7 +87,7 @@ include "topheader.php";
                                                 <div class="col-auto">
                                                     <div
                                                         class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                                                        <i class="ni ni-chart-pie-35"></i>
+                                                        <i class="fab fa-deezer"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -114,7 +118,7 @@ include "topheader.php";
                                                 <div class="col-auto">
                                                     <div
                                                         class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
-                                                        <i class="ni ni-money-coins"></i>
+                                                        <i class="fas fa-user-friends"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -133,16 +137,16 @@ include "topheader.php";
                                             <div class="row">
                                                 <div class="col">
                                                     <h5 class="card-title text-uppercase text-muted mb-0">Doanh thu
-                                                        tháng hiện tại</h5>
+                                                        của năm</h5>
                                                     <span class="h2 font-weight-bold mb-0"> <?php 
                             $todaysale =0;
-                                $query1 = mysqli_query($con,"SELECT order_id,total_amt FROM orders_info where MONTH(dateorder) = MONTH(CURDATE())");
+                                $query1 = mysqli_query($con,"SELECT year(CURDATE()) ,sum(amt) as 'tongtien' FROM order_products,orders_info WHERE orders_info.order_id = order_products.order_id and year(dateorder) = year(CURDATE())");
                                 $result1 = mysqli_num_rows($query1);
                                 if($result1 > 0)
                                 {
                                         while($row = mysqli_fetch_array($query1))
                                         {
-                                            $today_sale=$row["total_amt"];
+                                            $today_sale=$row["tongtien"];
                                             $todaysale+=$today_sale;
                                         }
                                         echo "<h4>$todaysale $</h4>" ;
@@ -154,7 +158,7 @@ include "topheader.php";
                                                 <div class="col-auto">
                                                     <div
                                                         class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
-                                                        <i class="ni ni-chart-bar-32"></i>
+                                                        <i class="far fa-chart-bar"></i>
                                                     </div>
                                                 </div>
                                             </div>

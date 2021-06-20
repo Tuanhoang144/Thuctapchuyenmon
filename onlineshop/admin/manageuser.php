@@ -17,7 +17,7 @@ include "topheader.php";
     <div class="container-fluid">
         <div class="col-md-14">
             <div class="card ">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-info">
                     <h4 class="card-title">Manage User</h4>
                 </div>
                 <div class="card-body">

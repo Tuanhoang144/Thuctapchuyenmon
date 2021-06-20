@@ -1,4 +1,4 @@
-  <?php
+<?php
 session_start();
 include("../db.php");
 
@@ -11,7 +11,7 @@ $price=$_POST['price'];
 // $c_price=$_POST['c_price'];
 $product_type=$_POST['product_type'];
 $brand=$_POST['brand'];
-$tags=$_POST['tags'];
+$tags=$_POST['tags'];;
 
 
 $picture_name=$_FILES['picture']['name'];
@@ -28,7 +28,7 @@ if($picture_type=="image/jpeg" || $picture_type=="image/jpg" || $picture_type=="
 		
 mysqli_query($con,"insert into products (product_cat, product_brand,product_title,product_price, product_desc, product_image,product_keywords) values ('$product_type','$brand','$product_name','$price','$details','$pic_name','$tags')") or die ("query incorrect");
 
- header("location: sumit_form.php?success=1");
+echo "<script>alert('Thêm sản phẩm thành công !')</script>";
 }
 
 mysqli_close($con);
@@ -43,7 +43,7 @@ include "topheader.php";
               <div class="row">
                   <div class="col-md-7">
                       <div class="card">
-                          <div class="card-header card-header-primary">
+                          <div class="card-header card-header-info">
                               <h5 class="title">Add Product</h5>
                           </div>
                           <div class="card-body">
@@ -84,26 +84,60 @@ include "topheader.php";
                   </div>
                   <div class="col-md-5">
                       <div class="card">
-                          <div class="card-header card-header-primary">
-                              <h5 class="title">Categories</h5>
+                          <div class="card-header card-header-info">
+                              <h5 class="title"></h5>
                           </div>
                           <div class="card-body">
 
                               <div class="row">
-
                                   <div class="col-md-12">
-                                      <div class="form-group">
-                                          <label>Product Category</label>
+                                      <div class="form-group" >
+                                          <!-- <label>Product Category</label>
                                           <input type="number" id="product_type" name="product_type" required="[1-6]"
-                                              class="form-control">
+                                              class="form-control"> -->
+                                              <label>Danh mục</label>
+                                                <?php
+                                                $sql_danhmuc = mysqli_query($con,"SELECT * FROM categories ORDER BY cat_id DESC"); 
+                                                ?>
+                                                <select id="product_type" name="product_type" class="form-control"  style="background-color:black; color:white;">
+                                                    <option value="0">Chọn danh mục</option>
+                                                    <?php
+                                                    while($row_danhmuc = mysqli_fetch_array($sql_danhmuc)){
+                                                    ?>
+                                                    <option value="<?php echo $row_danhmuc['cat_id'] ?>"><?php echo $row_danhmuc['cat_title'] ?></option>
+                                                    <?php 
+                                                    }
+                                                    ?>
+                                                </select><br>
                                       </div>
                                   </div>
                                   <div class="col-md-12">
+                                      <div class="form-group">
+                                          <!-- <label>Product Category</label>
+                                          <input type="number" id="product_type" name="product_type" required="[1-6]"
+                                              class="form-control"> -->
+                                              <label>Nhãn hiệu</label>
+                                                <?php
+                                                $sql_danhmuc = mysqli_query($con,"SELECT * FROM brands ORDER BY brand_id DESC"); 
+                                                ?>
+                                                <select id="brand" name="brand" class="form-control" style="background-color:black; color:white;">
+                                                    <option value="0">Chọn nhãn hiệu</option>
+                                                    <?php
+                                                    while($row_danhmuc = mysqli_fetch_array($sql_danhmuc)){
+                                                    ?>
+                                                    <option value="<?php echo $row_danhmuc['brand_id'] ?>"><?php echo $row_danhmuc['brand_title'] ?></option>
+                                                    <?php 
+                                                    }
+                                                    ?>
+                                                </select><br>
+                                      </div>
+                                  </div>
+                                  <!-- <div class="col-md-12">
                                       <div class="form-group">
                                           <label for="">Product Brand</label>
                                           <input type="number" id="brand" name="brand" required class="form-control">
                                       </div>
-                                  </div>
+                                  </div> -->
 
 
                                   <div class="col-md-12">
@@ -115,12 +149,17 @@ include "topheader.php";
                               </div>
 
                           </div>
-                          <div class="card-footer">
+                          <div class="">
+                          <center>
+                          <a href="productlist.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> </a>
                               <button type="submit" id="btn_save" name="btn_save" required
-                                  class="btn btn-fill btn-primary">Update Product</button>
+                                  class="btn btn-fill btn-primary">Update Product</button></center>
                           </div>
+                          
                       </div>
+                      
                   </div>
+                  
               </div>
           </form>
 

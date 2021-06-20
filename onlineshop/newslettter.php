@@ -26,7 +26,7 @@
 									<a href="https://www.instagram.com/tuanhoang25/"><i class="fa fa-instagram"></i></a>
 								</li>
 								<li>
-									<a href="https://github.com/Tuanhoang144/Thuctapchuyenmonc"><i class="fa fa-github"></i></a>
+									<a href="https://github.com/Tuanhoang144/Thuctapchuyenmon"><i class="fa fa-github"></i></a>
 								</li>
 							</ul>
 						</div>

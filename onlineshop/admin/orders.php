@@ -78,8 +78,7 @@ if(isset($_POST['btnExport'])){
 	$sheet->setCellValue('C'.$rowCount,'Email');
 	$sheet->setCellValue('D'.$rowCount,'Address');
 	$sheet->setCellValue('E'.$rowCount,'DateOrder');
-    $sheet->setCellValue('F'.$rowCount,'prod_count');
-	$sheet->setCellValue('G'.$rowCount,'total_amt');
+	$sheet->setCellValue('G'.$rowCount,'payment');
 	$cnt = 1;
 	$result = $con->query("SELECT * FROM orders_info");
 	while($row = mysqli_fetch_array($result)){
@@ -89,8 +88,7 @@ if(isset($_POST['btnExport'])){
 		$sheet->setCellValue('C'.$rowCount,$row['email']);
 		$sheet->setCellValue('D'.$rowCount,$row['address']);
 		$sheet->setCellValue('E'.$rowCount,$row['dateorder']);
-		$sheet->setCellValue('F'.$rowCount,$row['prod_count']);
-		$sheet->setCellValue('G'.$rowCount,$row['total_amt']);
+		$sheet->setCellValue('G'.$rowCount,$row['phuongthucthanhtoan']);
 		$cnt++;
 	}
 
@@ -137,8 +135,15 @@ include "topheader.php";
         <!-- your content here -->
         <div class="col-md-14">
             <div class="card ">
-                <div class="card-header card-header-primary">
-                    <h4 class="card-title">Orders / Page <?php echo $page;?> </h4>
+                <div class="card-header card-header-info">
+				<?php 
+                            if(isset($_GET['search']) && $_GET['search'] != ''){
+                                $a = $_GET['search'];
+                            }
+                        ?>
+                     <form method="GET">
+                         <input type="text" name="search" class="form-control col-md-10" placeholder="Tìm Kiếm">
+                     </form>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive ps">
@@ -160,7 +165,7 @@ include "topheader.php";
                          
                             <tbody>
                                 <?php
-									$query = $con->query("select * from orders_info") or die(mysqli_error());
+									$query = $con->query("select * from orders_info where f_name like '%".$a."%' ") or die(mysqli_error());
 									while($fetch = $query->fetch_array())
 										{
 										$order_id = $fetch['order_id'];
@@ -182,7 +187,7 @@ include "topheader.php";
 									<td><?php echo $orderstatus; ?></td>
 									<td><?php echo $phuongthucthanhtoan; ?></td>
 									
-                                    <td><a href="watchorder.php?order_id=<?php echo $order_id; ?>">View</a>
+                                    <td><a href="orderdetails.php?order_id=<?php echo $order_id; ?>">View</a>
                                         <?php
 									if($orderstatus == 'Confirmed'){
 
@@ -200,6 +205,7 @@ include "topheader.php";
                             </tbody>
                         </table>
                         <form method="POST">  
+						<a href="orders.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> </a>
                         <button class="btn btn-mini btn-info" name="btnExport" type="submit" >Xuất file excel</button>
                          </form>
                         <div class="ps__rail-x" style="left: 0px; bottom: 0px;">

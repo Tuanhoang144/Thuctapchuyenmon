@@ -26,7 +26,7 @@ include "topheader.php";
     <div class="container-fluid">
         <div class="col-md-5 mx-auto">
             <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-info">
                     <h5 class="title">Edit Brands</h5>
                 </div>
                 <form action="editbrand.php" name="form" method="post" enctype="multipart/form-data">
@@ -41,6 +41,7 @@ include "topheader.php";
                             </div>
                         </div>
                     <div class="card-footer">
+                    <a href="managebrand.php" class="btn btn-warning"><i class="fa fa-angle-left"></i></a>
                         <button type="submit" id="btn_save" name="btn_save"
                             class="btn btn-fill btn-primary">Update Brand</button>
                     </div>

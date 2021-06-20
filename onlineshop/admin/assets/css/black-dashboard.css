@@ -2854,7 +2854,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 }
 
 .navbar.navbar-absolute {
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 1050;
 }
@@ -4203,7 +4203,7 @@ table.tablesorter thead tr .headerSortDown {
 }
 
 .main-panel .content {
-  padding: 80px 30px 30px 280px;
+  padding: 5px 30px 30px 280px;
   min-height: calc(100vh - 70px);
 }
 

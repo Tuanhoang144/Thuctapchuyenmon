@@ -11,7 +11,7 @@ session_start();
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Online Shopping</title>
+		<title>Shop Bán Hàng </title>
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -32,7 +32,19 @@ session_start();
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link type="text/css" rel="stylesheet" href="css/accountbtn.css"/>
-		
+		<script>window.MBID="A0aMmPA_f";</script><script defer src="https://menu.metu.vn/static/js/sdk.js?container=body"></script>
+		<!-- Hotjar Tracking Code for https://tuanshoponline12.000webhostapp.com/onlineshop/ -->
+		<script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:2451584,hjsv:6};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+
 		
 		
          
@@ -42,12 +54,12 @@ session_start();
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		<![endif] -->
     <style>
         #navigation {
           background: #FF4E50;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: -webkit-linear-gradient(to right, #14E0E0, #F9D423);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #14E0E0, #F9D423); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
           
         }
@@ -61,15 +73,15 @@ session_start();
         }
         #top-header {
             background: #870000;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: -webkit-linear-gradient(to right, #190A05, #190A05);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #190A05, #190A05); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
         }
         #footer {
             background: #7474BF;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: -webkit-linear-gradient(to right, #0FDBCE, #0FDBCE);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0FDBCE, #0FDBCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
           color: #1E1F29;
@@ -111,9 +123,9 @@ session_start();
        
         
         </style>
-
     </head>
 	<body>
+
 		<!-- HEADER -->
 		<header>
 			<!-- TOP HEADER -->
@@ -123,9 +135,15 @@ session_start();
 						<li><a href="#"><i class="fa fa-phone"></i> 0385390931</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> Htuan8288@gmail.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i>Gialai</a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-inr"></i> INR</a></li>
+						<li><a href="orderhistory.php"><i class="fa fa-info"></i> lịch sử đơn hàng</a></li>
+						<li><a class ="fa fa-inr" href="unpaid.php"><i class=""></i>Đơn hàng chưa thanh toán</a></li>
 						<li><?php
                              include "db.php";
                             if(isset($_SESSION["uid"])){
@@ -175,7 +193,7 @@ session_start();
 							<div class="header-logo">
 								<a href="#" class="logo">
 								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
-                                        Online Shop
+								Shop Bán Hàng
                                     </font>
 								</a>
 							</div>
@@ -185,13 +203,12 @@ session_start();
 						<!-- SEARCH BAR -->
 						<div class="col-md-6">
 							<div class="header-search">
-								<form>
+								<form >
 									<select class="input-select">
 										<option value="0">All Categories</option>
-										<option value="1">Men</option>
-										<option value="1">Women </option>
+										<option value="1">All</option>
 									</select>
-									<input class="input" id="search" type="text" placeholder="Search here">
+									<input class="input" name="search" id="search" type="text" placeholder="Search here">
 									<button type="submit" id="search_btn" class="search-btn">Search</button>
 								</form>
 							</div>
@@ -215,14 +232,14 @@ session_start();
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
+										<span>Giỏ hàng</span>
 										<div class="badge qty">0</div>
 									</a>
 									<div class="cart-dropdown"  >
 										<div class="cart-list" id="cart_product">
 										</div>
 										<div class="cart-btns">
-												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  edit cart</a>
+												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  đi tới giỏ hàng</a>
 											
 										</div>
 									</div>
@@ -295,9 +312,8 @@ session_start();
                             <div class="modal-body">
                             <?php
                                 include "register_form.php";
-    
                             ?>
-          
+
                             </div>
                             
                           </div>

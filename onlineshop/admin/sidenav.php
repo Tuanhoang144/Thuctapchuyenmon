@@ -12,6 +12,10 @@
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="assets/css/Material+Icons.css" />
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+<!-- Fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<!-- Custom StyleSheet -->
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <link href="assets/css/black-dashboard.css" rel="stylesheet" />
@@ -41,11 +45,13 @@
 		$('#cargaBarras').load('barras.php');
 	});
 </script>
+
 </head>
 
 <body class="dark-edition">
+
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="black" data-image="./assets/img/sidebar-4.jpg">
+    <div class="sidebar" data-color="danger" data-background-color="white" data-image="./assets/img/sidebar-2.jpg">
       <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -83,12 +89,12 @@
               <p>Đơn hàng</p>
             </a>
           </li>
-          <!-- <li class="nav-item ">
+          <li class="nav-item ">
             <a class="nav-link" href="bills.php">
               <i class="material-icons">library_books</i>
               <p>Hoá Đơn</p>
             </a>
-          </li> -->
+          </li>
           <!-- <li class="nav-item ">
             <a class="nav-link" href="addproduct.php">
               <i class="material-icons">add</i>
@@ -104,14 +110,14 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="managecategory.php">
-              <i class="material-icons">edit_user</i>
+            <i class="fas fa-list-ul"></i>
               <p>Quản lý Danh mục</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="managebrand.php">
-              <i class="material-icons">edit_user</i>
-              <p>Quản lý hãng</p>
+            <i class="fas fa-location-arrow"></i>
+              <p>Quản lý Nhãn hiệu</p>
             </a>
           </li>
           <!-- <li class="nav-item ">
@@ -131,8 +137,5 @@
         </ul>
       </div>
     </div>
-
-
-
     </body>
     

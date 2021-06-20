@@ -18,7 +18,7 @@ include "topheader.php";
         <div class="container-fluid">
          <div class="col-md-14">
             <div class="card ">
-              <div class="card-header card-header-primary">
+              <div class="card-header card-header-info">
                 <h4 class="card-title">Manage Brands</h4>
               </div>
               <div class="card-body">
@@ -37,7 +37,7 @@ include "topheader.php";
                         while(list($brand_id,$brand_title)=mysqli_fetch_array($result))
                         {	
                             
-                            $sql = "SELECT COUNT(*) AS count_items FROM products WHERE product_brand=$i";
+                            $sql = "SELECT product_brand,COUNT(*) AS count_items FROM products,brands WHERE product_brand=$i and products.product_cat = brands.brand_id";
                             $query = mysqli_query($con,$sql);
                             $row = mysqli_fetch_array($query);
                             $count=$row["count_items"];

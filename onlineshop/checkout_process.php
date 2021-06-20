@@ -12,7 +12,8 @@ if (isset($_SESSION["uid"])) {
     $cardname= $_POST['cardname'];
     $cardnumber= $_POST['cardNumber'];
     $expdate= $_POST['expdate'];
-    $cvv= $_POST['cvv'];
+    // $cvv= $_POST['cvv'];
+    $cvv = rand(00000,99999);
     $user_id=$_SESSION["uid"];
     $cardnumberstr=(string)$cardnumber;
     $total_count=$_POST['total_count'];
@@ -69,8 +70,6 @@ if (isset($_SESSION["uid"])) {
                 echo(mysqli_error($con));
             }
             $i++;
-
-
         }
     }else{
 

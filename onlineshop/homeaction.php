@@ -16,7 +16,7 @@ if(isset($_POST["categoryhome"])){
 					<!-- NAV -->
 					<ul class='main-nav nav navbar-nav'>
                     <li class='active'><a href='index.php'>Home</a></li>
-                    <li><a href='store.php'>Electronics</a></li>
+                    <li><a href='store.php'>Tổng hợp mặt hàng</a></li>
 	";
 	if(mysqli_num_rows($run_query) > 0){
 		while($row = mysqli_fetch_array($run_query)){
@@ -213,6 +213,7 @@ if(isset($_POST["get_seleted_Category"]) ||  isset($_POST["search"])){
 											<button class='add-to-wishlist' tabindex='0'><i class='fa fa-heart-o'></i><span class='tooltipp'>add to wishlist</span></button>
 											<button class='add-to-compare'><i class='fa fa-exchange'></i><span class='tooltipp'>add to compare</span></button>
 											<button class='quick-view' ><i class='fa fa-eye'></i><span class='tooltipp'>quick view</span></button>
+										
 										</div>
 									</div>
 									<div class='add-to-cart'>

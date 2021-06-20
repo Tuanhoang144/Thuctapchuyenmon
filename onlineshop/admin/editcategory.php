@@ -14,7 +14,7 @@ $cat_title=$_POST['cat_title'];
 
 
 mysqli_query($con,"update categories set cat_title='$cat_title' where cat_id='$cat_id'")or die("Query 2 is inncorrect..........");
-
+echo "<script>alert('Thành công !')</script>";
 header("location: managecategory.php");
 mysqli_close($con);
 }
@@ -26,7 +26,7 @@ include "topheader.php";
     <div class="container-fluid">
         <div class="col-md-5 mx-auto">
             <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-info">
                     <h5 class="title">Edit Categories</h5>
                 </div>
                 <form action="editcategory.php" name="form" method="post" enctype="multipart/form-data">
@@ -41,6 +41,7 @@ include "topheader.php";
                             </div>
                         </div>
                     <div class="card-footer">
+                    <a href="managecategory.php" class="btn btn-warning"><i class="fa fa-angle-left"></i></a>
                         <button type="submit" id="btn_save" name="btn_save"
                             class="btn btn-fill btn-primary">Update Categories</button>
                     </div>

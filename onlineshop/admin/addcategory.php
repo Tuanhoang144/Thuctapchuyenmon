@@ -9,12 +9,12 @@ $cat_title=$_POST['cat_title'];
 
 mysqli_query($con,"insert into Categories(cat_title) values ('$cat_title')") 
 			or die ("Query 1 is inncorrect........");  
-
-
-header("location: sumit_form.php?success=1");  
+            
+ echo "<script>alert('Thêm danh mục Thành công !')</script>";
+            
 mysqli_close($con); 
 }
-  
+
 ?>
 <!-- End Navbar -->
 <div class="content">
@@ -22,7 +22,7 @@ mysqli_close($con);
         <!-- your content here -->
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-info">
                     <h4 class="card-title">Add Categories</h4>
                     <p class="card-category">Complete Categories profile</p>
                 </div>
@@ -38,10 +38,12 @@ mysqli_close($con);
                             </div>
 
                         </div>
+                        <a href="managecategory.php" class="btn btn-warning"><i class="fa fa-angle-left"></i></a>
                         <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Update
                             Categories</button>
                         <div class="clearfix"></div>
                     </form>
+                   
                 </div>
             </div>
         </div>

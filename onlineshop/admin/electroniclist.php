@@ -43,7 +43,7 @@ include "topheader.php";
         
          <div class="col-md-14">
             <div class="card ">
-              <div class="card-header card-header-primary">
+              <div class="card-header card-header-info">
                 <h4 class="card-title"> Products List</h4>
                 <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
                       <label class="btn btn-sm btn-primary btn-simple active" id="0">

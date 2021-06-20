@@ -88,8 +88,6 @@ if(isset($_POST["page"])){
 	for($i=1;$i<=$pageno;$i++){
 		echo "
 			<li><a href='#product-row' page='$i' id='page' class='active'>$i</a></li>
-            
-            
 		";
 	}
 }
@@ -114,8 +112,6 @@ if(isset($_POST["getProduct"])){
             
             $cat_name = $row["cat_title"];
 			echo "
-				
-                        
                         <div class='col-md-4 col-xs-6' >
 								<a href='product.php?p=$pro_id'><div class='product'>
 									<div class='product-img'>
@@ -139,7 +135,7 @@ if(isset($_POST["getProduct"])){
 										<div class='product-btns'>
 											<button class='add-to-wishlist'><i class='fa fa-heart-o'></i><span class='tooltipp'>add to wishlist</span></button>
 											<button class='add-to-compare'><i class='fa fa-exchange'></i><span class='tooltipp'>add to compare</span></button>
-											<button class='quick-view'><i class='fa fa-eye'></i><span class='tooltipp'>quick view</span></button>
+											<button class='quick-view'><a class='fa fa-eye' href='product.php?p=$pro_id'></a><span class='tooltipp'>quick view</span></button>
 										</div>
 									</div>
 									<div class='add-to-cart'>
@@ -152,24 +148,23 @@ if(isset($_POST["getProduct"])){
 		}
 	}
 }
-
-
-if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isset($_POST["search"])){
+// if(isset($_GET['search']) && $_GET['search'] != ''){
+// 	$keyword = $_GET['search'];
+// 	// header('Location:store.php');
+// 	$sql = "SELECT * FROM products,categories WHERE product_cat=cat_id AND product_keywords like '%".$keyword."%'";
+// }
+if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isset($_GET["search"] )){
 	if(isset($_POST["get_seleted_Category"])){
 		$id = $_POST["cat_id"];
-		$sql = "SELECT * FROM products,categories WHERE product_cat = '$id' AND product_cat=cat_id";
-        
+		$sql = "SELECT * FROM products,categories WHERE product_cat = '$id' AND product_cat=cat_id"; 
 	}else if(isset($_POST["selectBrand"])){
 		$id = $_POST["brand_id"];
 		$sql = "SELECT * FROM products,categories WHERE product_brand = '$id' AND product_cat=cat_id";
 	}else {
-        
-		$keyword = $_POST["keyword"];
-        header('Location:store.php');
-		$sql = "SELECT * FROM products,categories WHERE product_cat=cat_id AND product_keywords LIKE '%$keyword%'";
-       
+		$a = $_GET["search"];
+        // header('Location:store.php');
+		$sql = "SELECT * FROM products,categories WHERE  product_title like '%".$a."%'";
 	}
-	
 	$run_query = mysqli_query($con,$sql);
 	while($row=mysqli_fetch_array($run_query)){
 			$pro_id    = $row['product_id'];
@@ -179,9 +174,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 			$pro_price = $row['product_price'];
 			$pro_image = $row['product_image'];
             $cat_name = $row["cat_title"];
-			echo "
-					
-                        
+			echo "      
                         <div class='col-md-4 col-xs-6'>
 								<a href='product.php?p=$pro_id'><div class='product'>
 									<div class='product-img'>
@@ -205,16 +198,18 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 										<div class='product-btns'>
 											<button class='add-to-wishlist' tabindex='0'><i class='fa fa-heart-o'></i><span class='tooltipp'>add to wishlist</span></button>
 											<button class='add-to-compare'><i class='fa fa-exchange'></i><span class='tooltipp'>add to compare</span></button>
-											<button class='quick-view' ><i class='fa fa-eye'></i><span class='tooltipp'>quick view</span></button>
+											<button class='quick-view'><i class='fa fa-eye' ></i><span class='tooltipp'>quick view</span></button>
 										</div>
 									</div>
 									<div class='add-to-cart'>
 										<button pid='$pro_id' id='product' href='#' tabindex='0' class='add-to-cart-btn'><i class='fa fa-shopping-cart'></i> add to cart</button>
+										
 									</div>
 								</div>
 							</div>
 			";
 		}
+		$_SESSION['id'] = $pro_id;
 	}
 	
 
@@ -236,7 +231,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 			echo "
 				<div class='alert alert-warning'>
 						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Product is already added into the cart Continue Shopping..!</b>
+						<b>Sản phẩm đã được thêm vào giỏ hàng Tiếp tục Mua sắm ..!</b>
 				</div>
 			";//not in video
 		} else {
@@ -247,7 +242,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 				echo "
 					<div class='alert alert-success'>
 						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Product is Added..!</b>
+						<b>Sản phẩm của bạn đã được thêm thành công ..!</b>
 					</div>
 				";
 			}
@@ -259,7 +254,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 				echo "
 					<div class='alert alert-warning'>
 							<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-							<b>Product is already added into the cart Continue Shopping..!</b>
+							<b>Sản phẩm đã được thêm vào giỏ hàng Tiếp tục Mua sắm ..!</b>
 					</div>";
 					exit();
 			}
@@ -270,17 +265,13 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 				echo "
 					<div class='alert alert-success'>
 						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Your product is Added Successfully..!</b>
+						<b>Sản phẩm của bạn đã được thêm thành công ..!</b>
 					</div>
 				";
 				exit();
 			}
 			
-		}
-		
-		
-		
-		
+		}	
 	}
 
 //Count User cart item
@@ -379,8 +370,8 @@ if (isset($_POST["Common"])) {
 					</thead>
 					<tbody>
                     ';
-				$n=0;
-				while ($row=mysqli_fetch_array($query)) {
+					$n=0;
+					while ($row=mysqli_fetch_array($query)) {
 					$n++;
 					$product_id = $row["product_id"];
 					$product_title = $row["product_title"];
@@ -391,7 +382,6 @@ if (isset($_POST["Common"])) {
 
 					echo 
 						'
-                             
 						<tr>
 							<td data-th="Product" >
 								<div class="row">
@@ -401,7 +391,7 @@ if (isset($_POST["Common"])) {
 									</div>
 									<div class="col-sm-6">
 										<div style="max-width=50px;">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+										<p>Sản phẩm đẹp được thiết kế mượt mà, sang trọng, đơn giản và tối ưu...!</p>
 										</div>
 									</div>
 									
@@ -527,9 +517,6 @@ if (isset($_POST["updateCartItem"])) {
 		exit();
 	}
 }
-
-
-
 
 ?>
 

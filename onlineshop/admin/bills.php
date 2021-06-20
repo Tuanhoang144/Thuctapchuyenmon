@@ -13,34 +13,41 @@ include "topheader.php";
         <!-- your content here -->
         <div class="col-md-14">
             <div class="card ">
-                <div class="card-header card-header-primary">
-                    <h4 class="card-title">Orders / Page <?php echo $page;?> </h4>
+                <div class="card-header card-header-info">
+                <?php 
+                                if(isset($_GET['search']) && $_GET['search'] != ''){
+                                    $a = $_GET['search'];
+                                }
+                            ?>
+                        <form method="GET">
+                            <input type="text" name="search" class="form-control col-md-10" placeholder="Tìm Kiếm">
+                        </form>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive ps">
+                        
                         <table class="table table-hover tablesorter " id="">
                             <thead class=" text-primary">
                                 <tr>
+                                    <th>Orrder id</th>
                                     <th>Customer Name</th>
-                                    <th>Product Name</th>
-                                    <th>Phone number | Email</th>
+                                    <th> Email</th>
                                     <th>Address</th>
+                                    <th>Orders date</th>
                                     <th>price</th>
-                                    <th>Time</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php 
-                        $result=mysqli_query($con,"select orders_info.order_id,  user_info_backup.last_name,products.product_title, user_info_backup.mobile, user_info_backup.email, user_info_backup.address1, amt,dateorder 
-                        from orders_info,products,order_products,user_info_backup 
-                        where orders_info.user_id = user_info_backup.user_id and orders_info.order_id = order_products.order_id and order_products.product_id = products.product_id ")or die ("query 1 incorrect.....");
+                        $result=mysqli_query($con,"SELECT order_products.order_id,f_Name,email,address,dateorder,sum(amt) as 'tongtien' FROM order_products,products,orders_info  WHERE f_Name like '%".$a."%' and products.product_id = order_products.product_id  and orders_info.order_id = order_products.order_id
+                        group by order_products.order_id")or die ("query 1 incorrect.....");
 
-                        while(list($order_id,$cus_names,$pro_name,$email,$address,$count,$price,$time)=mysqli_fetch_array($result))
+                        while(list($order_id,$cus_names,$email,$address,$time,$price)=mysqli_fetch_array($result))
                         {	
-                        echo "<tr><td>$cus_names</td><td>$pro_name</td><td>$email<br>$address</td><td>$count</td><td>$price</td><td>$time</td>
+                        echo "<tr><td>$order_id</td><td>$cus_names</td><td>$email</td><td>$address</td><td>$time</td><td>$price</td>
                         
                         <td>
-                        <a class=' btn btn-danger' href='watchorder.php?order_id=$order_id'>Xuất hoá đơn</a>
+                        <a class=' btn btn-danger' href='invoicedetails.php?order_id=$order_id'>Xuất hoá đơn</a>
                         </td></tr>";
                         }
                         ?>

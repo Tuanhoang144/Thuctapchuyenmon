@@ -9,7 +9,8 @@ $brand_title=$_POST['brand_title'];
 
 mysqli_query($con,"insert into brands(brand_title) values ('$brand_title')") 
 			or die ("Query 1 is inncorrect........");   
-header("location: managebrand.php");
+            
+echo "<script>alert('Thêm Thành công !')</script>";
 mysqli_close($con);     
 }
 
@@ -21,7 +22,7 @@ mysqli_close($con);
         <!-- your content here -->
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-info">
                     <h4 class="card-title">Add Brands</h4>
                     <p class="card-category">Complete Brands profile</p>
                 </div>
@@ -37,6 +38,7 @@ mysqli_close($con);
                             </div>
 
                         </div>
+                        <a href="managebrand.php" class="btn btn-warning"><i class="fa fa-angle-left"></i></a>
                         <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Update
                             Brands</button>
                         <div class="clearfix"></div>

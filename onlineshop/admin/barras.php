@@ -1,6 +1,7 @@
 <?php
 	require_once "../db.php";
-	$sql="SELECT month(dateorder),total_amt from orders_info ";
+	$sql="SELECT month(dateorder) ,sum(amt) as 'tongtien' FROM order_products,orders_info WHERE orders_info.order_id = order_products.order_id
+group by month(dateorder)";
 	$result=mysqli_query($con,$sql);
 	$valoresY=array();//montos
 	$valoresX=array();//fechas

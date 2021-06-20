@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Cancel</title>
+<?php
 
-    <!-- FONT AWESOME ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+include "db.php";
+include "header.php";
+$sa = $_SESSION['uid'];
+	$sql = mysqli_query($con,"update orders_info set phuongthucthanhtoan='null' where user_id='$sa' and phuongthucthanhtoan is NULL");
+    if($sql){
+        echo "<script>alert('Thanh toán chưa thành công !')</script>";
+    }
+?>
 
-    <link rel="stylesheet" href="style.css">
 
-</head>
-<body>
-<main id="cart-main">
 
-    <div class="site-title text-center">
-        <div><img src="./assets/cancel.png" alt=""></div>
-        <h1 class="font-title">Payment Cancel For Some Reason</h1>
-    </div>
 
-</main>
+			<form method="post" action="login_form.php">
+        <h1 class="font-title">Thanh toán bị hủy vì một số lý do</h1>
+        <td><a href="store.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+        </form>
 
-</body>
-</html>
-
+<?php
+include "newslettter.php";
+include "footer.php";
+?>

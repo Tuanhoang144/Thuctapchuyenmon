@@ -1,5 +1,19 @@
 <?php
+
 include "header.php";
+include 'db.php';
+if(isset($_POST['btn_save123']))
+{
+$product_id = $_GET['p'];
+$your_name=$_POST['yourname'];
+$details=$_POST['youremail'];
+$review1=$_POST['yourreview'];
+
+mysqli_query($con,"insert into productreviews (product_id,yourname, youremail,review) values ('$product_id','$your_name','$details','$review1')") or die ("query incorrect");
+
+mysqli_close($con);
+}
+
 ?>
 		<!-- /BREADCRUMB -->
 		<script type="text/javascript">
@@ -65,6 +79,7 @@ include "header.php";
 									die("Connection failed: " . mysqli_connect_error());
 								}
 								$result = mysqli_query($con, $sql);
+								
 								if (mysqli_num_rows($result) > 0) 
 								{
 									while($row = mysqli_fetch_assoc($result)) 
@@ -141,7 +156,7 @@ include "header.php";
 								<h3 class="product-price">$'.$row['product_price'].'<del class="product-old-price">$990.00</del></h3>
 								<span class="product-available">In Stock</span>
 							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<p>Sản phẩm đẹp được thiết kế mượt mà, sang trọng, đơn giản và tối ưu...!</p>
 
 							<div class="product-options">
 								<label>
@@ -226,7 +241,7 @@ include "header.php";
 								<div id="tab1" class="tab-pane fade in active">
 									<div class="row">
 										<div class="col-md-12">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											<p>Sang trọ lịch lãm,đầy sức sống......</p>
 										</div>
 									</div>
 								</div>
@@ -236,7 +251,7 @@ include "header.php";
 								<div id="tab2" class="tab-pane fade in">
 									<div class="row">
 										<div class="col-md-12">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											<p>Sang trọ lịch lãm,đầy sức sống.....</p>
 										</div>
 									</div>
 								</div>
@@ -328,78 +343,50 @@ include "header.php";
 											</div>
 										</div>
 										<!-- /Rating -->
-
+										
 										<!-- Reviews -->
 										<div class="col-md-6">
 											<div id="reviews">
 												<ul class="reviews">
 													<li>
 														<div class="review-heading">
-															<h5 class="name">John</h5>
-															<p class="date">27 DEC 2018, 8:0 PM</p>
-															<div class="review-rating">
+														<h5>'; ?>
+														<?php 
+														$result=mysqli_query($con,"select * from productreviews where product_id = $product_id")or die ("query 2 incorrect.......");
+														while(list($review,$review1,$review2,$review3,$review4)=mysqli_fetch_array($result))
+														{
+															echo "<tr><td>Khách hàng:$review2</td></h5><td>đánh giá:$review4</td></br>";
+																echo'<div class="review-rating">
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star-o empty"></i>
-															</div>
+																</div>';	
+														}   
+														mysqli_close($con);
+														?>
+															<?php echo'
+															
+															<p class="date"></p>
+															
 														</div>
-														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-														</div>
-													</li>
-													<li>
-														<div class="review-heading">
-															<h5 class="name">John</h5>
-															<p class="date">27 DEC 2018, 8:0 PM</p>
-															<div class="review-rating">
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star-o empty"></i>
-															</div>
-														</div>
-														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+														<div class="review-body">	
+														<p></p>
 														</div>
 													</li>
-													<li>
-														<div class="review-heading">
-															<h5 class="name">John</h5>
-															<p class="date">27 DEC 2018, 8:0 PM</p>
-															<div class="review-rating">
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star-o empty"></i>
-															</div>
-														</div>
-														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-														</div>
-													</li>
-												</ul>
-												<ul class="reviews-pagination">
-													<li class="active">1</li>
-													<li><a href="#">2</a></li>
-													<li><a href="#">3</a></li>
-													<li><a href="#">4</a></li>
-													<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
 												</ul>
 											</div>
 										</div>
 										<!-- /Reviews -->
-
+										
 										<!-- Review Form -->
 										<div class="col-md-3 mainn">
 											<div id="review-form">
-												<form class="review-form">
-													<input class="input" type="text" placeholder="Your Name">
-													<input class="input" type="email" placeholder="Your Email">
-													<textarea class="input" placeholder="Your Review"></textarea>
+												<form class="review-form" method="POST">
+													<input class="input" type="text" id="yourname" name="yourname" placeholder="Your Name">
+													<input class="input" type="email" id="youremail" name="youremail" placeholder="Your Email">
+													<textarea class="input" id="yourreview" name="yourreview" placeholder="Your Review"></textarea>
 													<div class="input-rating">
 														<span>Your Rating: </span>
 														<div class="stars">
@@ -410,7 +397,7 @@ include "header.php";
 															<input id="star1" name="rating" value="1" type="radio"><label for="star1"></label>
 														</div>
 													</div>
-													<button class="primary-btn">Submit</button>
+													<button id="btn_save123" name="btn_save123" class="primary-btn">Submit</button>
 												</form>
 											</div>
 										</div>
@@ -429,7 +416,7 @@ include "header.php";
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
-
+										
 		<!-- Section -->
 		<div class="section main main-raised">
 			<!-- container -->
@@ -451,11 +438,9 @@ include "header.php";
 								<?php
                     include 'db.php';
 								$product_id = $_GET['p'];
-                    
-					$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id AND product_id BETWEEN $product_id AND $product_id+3";
+					$product_query = "SELECT * FROM products,categories WHERE products.product_cat=categories.cat_id AND product_id BETWEEN $product_id AND $product_id+3";
                 $run_query = mysqli_query($con,$product_query);
                 if(mysqli_num_rows($run_query) > 0){
-
                     while($row = mysqli_fetch_array($run_query)){
                         $pro_id    = $row['product_id'];
                         $pro_cat   = $row['product_cat'];
@@ -467,8 +452,6 @@ include "header.php";
                         $cat_name = $row["cat_title"];
 
                         echo "
-				
-                        
                                 <div class='col-md-3 col-xs-6'>
 								<a href='product.php?p=$pro_id'><div class='product'>
 									<div class='product-img'>

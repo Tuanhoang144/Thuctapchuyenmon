@@ -49,7 +49,7 @@ include "topheader.php";
 
          <div class="col-md-14">
              <div class="card ">
-                 <div class="card-header card-header-primary">
+                 <div class="card-header card-header-info">
                         <?php 
                             if(isset($_GET['search']) && $_GET['search'] != ''){
                                 $a = $_GET['search'];
@@ -78,9 +78,9 @@ include "topheader.php";
                                     $result=mysqli_query($con,$sql);
                                     while(list($product_id,$image,$product_name,$price)=mysqli_fetch_array($result))
                                     {
-                                    echo "<tr><td><img src='../product_images/$image' style='width:50px; height:50px; border:groove #000'></td><td>$product_name</td>
+                                    echo "<tr><td><img src='../product_images/$image' style='width:100px; height:120px; border:groove #000'></td><td style='font-size:1.3rem;color:white'>$product_name</td>
                                     <td>$price</td>
-                                    <td>
+                                    <td style='width:300px'>
 
                                     <a class=' btn btn-success' href='editproduct.php?product_id=$product_id'>Edit</a>
                                     <a class=' btn btn-danger' href='productlist.php?product_id=$product_id&action=delete'>Delete</a>

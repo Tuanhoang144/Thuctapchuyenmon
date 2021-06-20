@@ -1,9 +1,11 @@
+
+  
 $(document).ready(function(){
 	cat();
     cathome();
 	brand();
 	product();
-    
+
     producthome();
     
     
@@ -148,7 +150,7 @@ $(document).ready(function(){
 		if(keyword != ""){
 			$.ajax({
 			url		:	"action.php",
-			method	:	"POST",
+			method	:	"GET",
 			data	:	{search:1,keyword:keyword},
 			success	:	function(data){ 
 				$("#get_product").html(data);
@@ -413,25 +415,3 @@ $(document).ready(function(){
 		})
 	})
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

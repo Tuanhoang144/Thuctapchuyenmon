@@ -16,7 +16,7 @@ $address2=$_POST['country'];
 mysqli_query($con,"insert into user_info_backup(first_name, last_name,email,password,mobile,address1,address2) values ('$first_name','$last_name','$email','$user_password','$mobile','$address1','$address2')") 
 			or die ("Query 1 is inncorrect........");
 
-      header('location:manageuser.php');
+      echo "<script>alert(' Thêm thành công !')</script>";
 mysqli_close($con);
 }
 ?>
@@ -26,7 +26,7 @@ mysqli_close($con);
           <!-- your content here -->
           <div class="col-md-12">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-info">
                   <h4 class="card-title">Add Users</h4>
                   <p class="card-category">Complete User profile</p>
                 </div>
@@ -84,7 +84,7 @@ mysqli_close($con);
                       </div>
                       
                     </div>
-                    
+                    <a href="managecatuser.php" class="btn btn-warning"><i class="fa fa-angle-left"></i></a>
                     <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Update User</button>
                     <div class="clearfix"></div>
                   </form>

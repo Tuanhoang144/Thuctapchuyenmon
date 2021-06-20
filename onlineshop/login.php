@@ -1,6 +1,5 @@
 <?php
 include "db.php";
-
 session_start();
 
 #Login script is begin here
@@ -90,11 +89,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
                     echo "<span style='color:red;'>Please register before login..!</span>";
                     exit();
                 }
-    
-	
-}
-    
-	
+}	
 }
 
 ?>
