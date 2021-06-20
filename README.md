@@ -49,11 +49,6 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 34. 
 
 
-## Phần 3: Các chức năng chưa hoàn thành:
-1. Đăng nhập bằng google and facebook.
-2. 
-3. 
-4.
 
 ## Hướng dẫn sử dụng:
 
