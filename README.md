@@ -8,9 +8,10 @@ Giảng viên: Thầy Nguyễn Lê Minh. 
 ## Phần 1: Công nghệ sử dụng:
 1. Mysql.
 2. Xamp.
-3. Php.
-4. API Google, Facebook, Paypal.
-5. Ajax,Bootstrap.
+3. Html,Css,Js.
+4. Php.
+5. API Google, Facebook, Paypal.
+6. Ajax,Bootstrap.
 
 ## Phần 2: Các chức năng đã hoàn thành:
 1. Đăng nhập, đăng xuất, đăng kí, cho admin and khách hàng.
