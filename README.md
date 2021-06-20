@@ -6,32 +6,47 @@ Họ và tên:Hoàng Huy Tuấn
 Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Phần 1: Công nghệ sử dụng:
-1. Mysql
-2. xamp
-3. php
+1. Mysql.
+2. Xamp.
+3. Php.
+4. API Google, Facebook, Paypal.
+5. Ajax,Bootstrap.
 
 ## Phần 2: Các chức năng đã hoàn thành:
-1. Đăng nhập, đăng xuất, quên mật khẩu, đăng kí, cho admin and khách hàng.
+1. Đăng nhập, đăng xuất, đăng kí, cho admin and khách hàng.
 2. Xây dựng Cơ sở dữ liệu .
-3. Quản lý danh mục sản phẩm thêm sửa xoá.
-4. Quản lý người dùng.
-5. Quản lý sản phẩm thêm sửa xoá sản phẩm tìm kiếm.
-6. Quản lý đơn hàng.
-7. Thêm sản phẩm vào giỏ hàng.
-8. Hiển thị danh sách sản phẩm theo danh mục.
-9. Hiển thị thông tin chi tiết sản phẩm mua khi khách hàng mua.
-10. thống kê khách hàng ,doanh thu .
-11. thêm sản phẩm vào giỏ hàng.
-12. Phân trang.
-13. Hiển thị sản phẩm liên quan.
-14. xuất hoá đơn file pdf.
-15. Thanh toán cod.
-16. Xuất file excel.
-17. Mã hóa mật khẩu (MD5).
-18. Thanh toán online paypal.
-19. Gửi gmail thông báo khi nhận đơn hàng.
-20. Duyệt đơn hàng .
-21. 
+3. Đổi mật khẩu nhập gmail để đổi lại mật khẩu.
+4. Xuất file excel.
+5. Xuất hoá đơn file pdf.
+6. Quản lý danh mục thêm sửa xoá.
+7. Quản lý người dùng.
+8. Quản lý sản phẩm thêm sửa xoá sản phẩm .
+9. Quản lý đơn hàng.
+10. Quản lý hoá đơn.
+11. Quản lý nhãn hiệu.
+12. Dashboard.
+13. Thống kê khách hàng,doanh thu ngày tháng năm.
+14. Thêm sản phẩm vào giỏ hàng.
+15. để lại số điện thoại liên hệ khách hàng, Zalo, Live Chat, Chia sẻ trang.
+16. Hỗ trợ nhắn tin qua Facebook.
+17. Nhận xét và đánh giá sản phẩm.
+18. Hiển thị tổng tiền.
+19. Khách hàng đánh giá trải nghiệm của khách hàng gửi về gmail.
+20. Hiển thị danh sách sản phẩm theo danh mục.
+21. Theo dõi lịch sử đơn hàng,đơn hàng chưa chọn phương thức thanh toán.
+22. Hiển thị thông tin chi tiết sản phẩm mua khi khách hàng mua.
+23. Tìm kiếm sản phẩm,hoá đơn,đơn hàng theo tên. 
+24. thêm sản phẩm vào giỏ hàng.
+25. Phân trang.
+26. Gợi ý các sản phẩm liên quan.
+27. Hiển thị các sản phẩm mới và top mua.
+28. Thanh toán cod,online paypal.
+29. Tạo địa chỉ shop bằng googlemap.
+30. Mã hóa mật khẩu (MD5).
+31. Deploy website.
+32. Gửi gmail thông báo khách hàng khi nhận đơn hàng.
+33. Duyệt đơn hàng.
+34. 
 
 
 ## Phần 3: Các chức năng chưa hoàn thành:
